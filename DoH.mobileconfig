@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadDisplayName</key>
+    <string>自建doh</string>
+    <key>PayloadDescription</key>
+    <string>自建DoH文件，Google，Adguard，阿里，腾讯云，CloudFlare</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.custom-doh-config</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>44a47e12-e261-4c42-ac6e-b1c1c7906f85</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadContent</key>
+    <array>
+        <!-- 阿里的DoH服务器条目 -->
+		<dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://dns.alidns.com/dns-query</string>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>114.114.114.114</string>
+                </array>
+            </dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.custom-doh</string>
+            <key>PayloadUUID</key>
+            <string>ca8345a6-8f78-4bd8-ab63-d6e58721a02c</string>
+            <key>PayloadDisplayName</key>
+            <string>阿里DNS</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDescription</key>
+            <string>阿里DNS over HTTPS</string>
+        </dict>
+        <!-- Adguard的DoH服务器条目 -->
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://dns.adguard-dns.com/dns-query</string>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>1.1.1.1</string>
+                    <string>8.8.8.8</string>
+                </array>
+			</dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.adguard-dns</string>
+            <key>PayloadUUID</key>
+            <string>ba05bb8e-ecbd-4bea-a7a7-fc8227534ad4</string>
+            <key>PayloadDisplayName</key>
+            <string>Adguard DNS</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDescription</key>
+            <string>Adguard DNS over HTTPS</string>
+        </dict>
+        <!-- Cloudflare的DoH服务器条目 -->
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://dns.cloudflare.com/dns-query</string>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>1.1.1.1</string>
+                    <string>8.8.8.8</string>
+                </array>
+			</dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.cloudflare-dns</string>
+            <key>PayloadUUID</key>
+            <string>02efaf0e-774d-4230-9448-521c4ca1e93f</string>
+            <key>PayloadDisplayName</key>
+            <string>Cloudflare DNS</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDescription</key>
+            <string>Cloudflare DNS over HTTPS</string>
+        </dict>
+        <!-- Google的DoH服务器条目 -->
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://dns.google/dns-query</string>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>1.1.1.1</string>
+                    <string>8.8.8.8</string>
+                </array>
+			</dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.google-dns</string>
+            <key>PayloadUUID</key>
+            <string>a9e2881d-c7e6-4b3c-aa89-6abf7ed8829b</string>
+            <key>PayloadDisplayName</key>
+            <string>Google DNS</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDescription</key>
+            <string>Google DNS over HTTPS</string>
+        </dict>
+        <!-- 腾讯的DoH服务器条目 -->
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://sm2.doh.pub/dns-query</string>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>114.114.114.114</string>
+                </array>
+			</dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.sm2-doh</string>
+            <key>PayloadUUID</key>
+            <string>23030dc3-4793-452f-bc62-b1de3e17ab67</string>
+            <key>PayloadDisplayName</key>
+            <string>腾讯DNS</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDescription</key>
+            <string>腾讯 DNS over HTTPS</string>
+        </dict>
+        <!-- wenxspace的DoH服务器条目 -->
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://dns.wenxspace.com/dns-query</string>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>1.1.1.1</string>
+					<string>8.8.8.8</string>
+                </array>
+            </dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.wenxspace-dns</string>
+            <key>PayloadUUID</key>
+            <string>bdcf0afa-54ea-4770-b852-8d7a22286a60</string> <!-- 生成一个新的UUID -->
+            <key>PayloadDisplayName</key>
+            <string>Wenxspace DNS</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDescription</key>
+            <string>Wenxspace DNS over HTTPS</string>
+        </dict>
+
+    </array>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+</dict>
+</plist>
